@@ -1,3 +1,5 @@
+//prueba
+
 import java.util.Scanner;
 
 public class PruebaEmpleado{
