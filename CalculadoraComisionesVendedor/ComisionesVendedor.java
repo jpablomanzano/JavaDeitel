@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ComisionesVendedor{
 
   private String nombreVendedor; //Nombre del vendedor
@@ -8,7 +9,7 @@ public class ComisionesVendedor{
   private double comisionesVendedorMes;// Comisiones en pesos después del calculo del porcentaje
   private double totalSueldoVendedor; //Total a pagar al vendedor
 
-
+  Scanner entrada = new Scanner(System.in);
   //nombreVendedor
   public void establecerNombreVendedor(String nombre){
     nombreVendedor = nombre;
@@ -18,7 +19,7 @@ public class ComisionesVendedor{
   }
 
   //sueldoBaseVendedor
-  public void establecerSueldoBaseVendedor(double sueldoBase){
+  public void establecerSueldoBaseVendedor(double sueldo){
     sueldoBaseVendedor = sueldo;
   }
   public double obtenerSueldoBaseVendedor(){
@@ -26,10 +27,19 @@ public class ComisionesVendedor{
   }
 
   //precioArticulo
-  public void establecerPrecioArticulo(double precio){
-    precioArticulo = precio;
-  }
-  public double obtenerPrecioArticulo(){
+  public double obtenerPrecioArticulo(int seleccion){
+
+    switch (seleccion) {
+
+      case 1:
+        precioArticulo = 239.99;
+      case 2:
+        precioArticulo = 129.75;
+      case 3:
+        precioArticulo = 99.95;
+      case 4:
+        precioArticulo = 350.89;
+    }
     return precioArticulo;
   }
 
@@ -42,16 +52,33 @@ public class ComisionesVendedor{
   }
 
   //ventasVendedor
-  public void establecerVentasVendedor(double ventas){
-    ventasVendedor = ventas;
+  public void establecerVentasVendedor(){
+
+    int articuloSeleccionado=0;
+    float ventas=0;
+
+    while (articuloSeleccionado >= 0){
+
+      System.out.print("Ingrese el articulo: ");
+      articuloSeleccionado = entrada.nextInt();
+
+
+      if (articuloSeleccionado >= 0) {
+        System.out.print("Ingrese la cantidad de articulos vendidos: ");
+        int cantidadArticulosVendidos = entrada.nextInt();
+
+        ventas = ventas + ( (float) cantidadArticulosVendidos * (float) obtenerPrecioArticulo(articuloSeleccionado));
+      }
+      ventasVendedor = ventas;
   }
+}
   public double obtenerVentasVendedor(){
     return ventasVendedor;
   }
 
   // comisionesVendedorMes
   public void establecerComisionesVendedorMes(){
-    comisionesVendedorMes = porcentajeComision;
+    comisionesVendedorMes = (porcentajeComisionVendedor/100) * ventasVendedor;
   }
 
   public double obtenerComisionesVendedorMes(){
@@ -60,7 +87,7 @@ public class ComisionesVendedor{
 
   //totalSueldoVendedor
   public void establecerTotalSueldoVendedor(){
-    sueldoBaseVendedor
+
   }
   public double obtenerTotalSueldoVendedor(){
     return totalSueldoVendedor;
