@@ -4,6 +4,7 @@ public class ComisionesVendedor{
   private double sueldoBaseVendedor;
   private double comisionesVendedorMes;
   private double totalSueldoVendedor;
+  private int articulo;
 
 
 }
