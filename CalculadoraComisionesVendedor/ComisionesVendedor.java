@@ -1,5 +1,5 @@
 public class ComisionesVendedor{
-  
-  float clases;
-  
+
+  private String nombreVendedor;
+
 }
