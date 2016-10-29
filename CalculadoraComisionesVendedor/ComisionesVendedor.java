@@ -45,7 +45,7 @@ public class ComisionesVendedor{
   }
 
   public double establecerPrecioArticulo(double precio){
-    precio = precioArticulo;
+    precioArticulo = precio;
   }
 
 }
