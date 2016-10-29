@@ -1,5 +1,5 @@
 public class ComisionesVendedor{
   
-  int clases;
+  float clases;
   
 }
