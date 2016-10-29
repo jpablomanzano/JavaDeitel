@@ -37,6 +37,11 @@ public class ComisionesVendedor{
     public double obtenerComisionesVendedorMes(){
         return comisionesVendedorMes;
     }
+  public void establecerTotalSueldoVendedor(){
     
+  }
+  public double obtenerTotalSueldoVendedor(){
+    return totalSueldoVendedor;
+  }
 
 }
