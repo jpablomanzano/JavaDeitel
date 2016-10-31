@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class ComisionesVendedor{
 
   private String nombreVendedor; //Nombre del vendedor
@@ -10,7 +11,16 @@ public class ComisionesVendedor{
   private double totalSueldoVendedor; //Total a pagar al vendedor
 
   Scanner entrada = new Scanner(System.in);
+
+
+  public ComisionesVendedor(String nombre, double sueldo, double porcentaje){
+    nombreVendedor = nombre;
+    sueldoBaseVendedor = sueldo;
+    porcentajeComisionVendedor = porcentaje;
+  }
+
   //nombreVendedor
+
   public void establecerNombreVendedor(String nombre){
     nombreVendedor = nombre;
   }
@@ -30,15 +40,22 @@ public class ComisionesVendedor{
   public double obtenerPrecioArticulo(int seleccion){
 
     switch (seleccion) {
-
       case 1:
         precioArticulo = 239.99;
+        break;
       case 2:
         precioArticulo = 129.75;
+        break;
       case 3:
         precioArticulo = 99.95;
+        break;
       case 4:
         precioArticulo = 350.89;
+        break;
+      default:
+        System.out.println("No ingresó un número de artículo válido, intente nuevamente.");
+        precioArticulo = 0;
+        break;
     }
     return precioArticulo;
   }
@@ -54,8 +71,8 @@ public class ComisionesVendedor{
   //ventasVendedor
   public void establecerVentasVendedor(){
 
-    int articuloSeleccionado=0;
-    float ventas=0;
+    int articuloSeleccionado = 0;
+    float ventas = 0;
 
     while (articuloSeleccionado >= 0){
 
@@ -67,9 +84,9 @@ public class ComisionesVendedor{
         System.out.print("Ingrese la cantidad de articulos vendidos: ");
         int cantidadArticulosVendidos = entrada.nextInt();
 
-        ventas = ventas + ( (float) cantidadArticulosVendidos * (float) obtenerPrecioArticulo(articuloSeleccionado));
+        ventas = ventas + ((float) cantidadArticulosVendidos * (float)obtenerPrecioArticulo(articuloSeleccionado));
       }
-      ventasVendedor = ventas;
+      ventasVendedor = (float)ventas;
   }
 }
   public double obtenerVentasVendedor(){
