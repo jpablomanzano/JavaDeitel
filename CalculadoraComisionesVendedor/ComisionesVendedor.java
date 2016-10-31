@@ -105,6 +105,8 @@ public class ComisionesVendedor{
   //totalSueldoVendedor
   public void establecerTotalSueldoVendedor(){
 
+    totalSueldoVendedor = sueldoBaseVendedor + comisionesVendedorMes;
+
   }
   public double obtenerTotalSueldoVendedor(){
     return totalSueldoVendedor;
