@@ -14,7 +14,8 @@ public class PruebaCalculadoraComisionesVendedor{
 
     System.out.println("Bienvenido a la calculadora de comisiones para vendedores");
 
-    System.out.println("Comenzaremos creando a nuestro primer vendedor: ");
+
+    System.out.println("CAPTURAR NUEVO VENDEDOR ");
 
     System.out.print("Ingrese el nombre del vendedor: ");
     nombre = entrada.nextLine();
@@ -27,17 +28,21 @@ public class PruebaCalculadoraComisionesVendedor{
 
     ComisionesVendedor vendedor1 = new ComisionesVendedor(nombre, sueldo, porcentaje);
 
-    System.out.println(vendedor1.obtenerNombreVendedor());
+
+    ComisionesVendedor vendedor2 = new ComisionesVendedor("Alvaro", 300, 9);
+
     vendedor1.establecerVentasVendedor();
-    System.out.printf("%.2f\n", vendedor1.obtenerVentasVendedor());
-
     vendedor1.establecerComisionesVendedorMes();
-
-    System.out.println(vendedor1.obtenerComisionesVendedorMes());
-
     vendedor1.establecerTotalSueldoVendedor();
-    System.out.println(vendedor1.obtenerTotalSueldoVendedor());
+
+    vendedor2.establecerVentasVendedor();
+    vendedor2.establecerComisionesVendedorMes();
+    vendedor2.establecerTotalSueldoVendedor();
+
+    System.out.printf("Pagar a %s la cantidad de $%.2f\n", vendedor1.obtenerNombreVendedor(), vendedor1.obtenerTotalSueldoVendedor());
+    System.out.printf("Pagar a %s la cantidad de $%.2f\n", vendedor2.obtenerNombreVendedor(), vendedor2.obtenerTotalSueldoVendedor());
 
   }
+
 
 }
