@@ -15,15 +15,19 @@ public class EncontrarDosNumerosGrandes{
       numero = entrada.nextInt();
 
       if (numero > mayorSegundo) {
-        if (numero > mayor) {
+        if (numero > mayor)
+        {
+          mayorSegundo = mayor;
           mayor = numero;
+        }else
+        {
+          mayorSegundo = numero;
         }
-        mayorSegundo = numero;
       }
-      }
+    }//Fin for
 
-
-      System.out.println(mayor);
-      System.out.println(mayorSegundo);
+      //Imprimo mis resultados
+      System.out.println("El numero mayor es: " + mayor);
+      System.out.println("El segundo numero mayor es:" + mayorSegundo);
     }
   }
