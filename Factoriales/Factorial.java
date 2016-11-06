@@ -27,7 +27,7 @@ public class Pruebas {
                 factorial = factorial * (numero-1);
                 --numero;
             }
-            System.out.println(factorial);
+            System.out.println("El factorial es: "+ factorial);
         }
     }
     
