@@ -1,27 +1,28 @@
 import java.util.Scanner;
 
 public class PruebaEncriptarNumero{
-  public static void main(String[] args) {
+ public static void main(String[] args) {
 
-    int pass;
+        int pass;
 
-    Scanner input = new Scanner(System.in);
 
-    System.out.println("Ingrese numero: ");
-    pass = input.nextInt();
+        Scanner input = new Scanner(System.in);
 
-    EncriptarNumero pass1 = new EncriptarNumero(pass);
+        System.out.print("Ingrese numero: ");
+        pass = input.nextInt();
 
-    pass1.establecerNumeroEncriptado();
-    System.out.println(pass1.obtenerNumeroEncriptado());
+        EncriptarNumero pass1 = new EncriptarNumero(pass);
 
-    System.out.println("Ingrese su numero encriptado: ");
-    pass = input.nextInt();
+        pass1.establecerNumeroEncriptado();
+        System.out.println(pass1.obtenerNumeroEncriptado());
 
-    DesencriptarNumero pass2 = new DesencriptarNumero(pass);
+        System.out.print("Ingrese su numero encriptado: ");
+        pass = input.nextInt();
 
-    pass2.establecerNumero();
-    System.out.println(pass2.obtenerNumero());
+        DesencriptarNumero pass2 = new DesencriptarNumero(pass);
 
-  }
+        pass2.establecerNumero();
+        System.out.println(pass2.obtenerNumero());
+
+    }
 }
