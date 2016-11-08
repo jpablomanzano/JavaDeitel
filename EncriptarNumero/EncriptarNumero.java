@@ -1,7 +1,7 @@
 public class EncriptarNumero{
 
   private int numero;
-  public int numeroEncriptado;
+  public String numeroEncriptado;
 
 
   public EncriptarNumero(int numero){
@@ -24,6 +24,8 @@ public class EncriptarNumero{
     int numero2;
     int numero3;
     int numero4;
+    int cambio1;
+    int cambio2;
 
     //Separo mis dígitos y los guardo a sus variables
     numero4 = numero % 10;
@@ -39,40 +41,32 @@ public class EncriptarNumero{
     numero = numero / 10;
 
     //Le sumo 7 a mis dígitos
-
-    numero1 = numero1 + 7;
-    if (numero1 > 9) {
-      numero1 = numero % 10;
-    }
-    numero2 = numero2 + 7;
-    if (numero2 > 9) {
-      numero2 = numero % 10;
-    }
-
-    numero3 = numero3 + 7;
-
-    if (numero3 > 9) {
-      numero3 = numero3 % 10;
-    }
     numero4 = numero4 + 7;
-    if (numero4 > 9) {
-      numero4 = numero4 % 10;
-    }
+    numero3 = numero3 + 7;
+    numero2 = numero2 + 7;
+    numero1 = numero1 + 7;
+
+    //Le asigno el modulo de 10 de cada número a si mismo
+    numero4 = numero4 % 10;
+    numero3 = numero3 % 10;
+    numero2 = numero2 % 10;
+    numero1 = numero1 % 10;
+
+    //Cambio el primero por el tercero y viceversa
+    cambio1 = numero1;
+    numero1 = numero3;
+    numero3 = cambio1;
+
+    //Cambio el segundo por el cuarto y viceversa
+    cambio2 = numero2;
+    numero2 = numero4;
+    numero4 = cambio2;
 
 
-    System.out.println(numero1);
-    System.out.println(numero2);
-    System.out.println(numero3);
-    System.out.println(numero4);
-    System.out.println(numero);
-
-    numero = (numero1 * 1000) + (numero2 * 100) + (numero3 * 10) + numero4;
-    System.out.println(numero);
-
-
+    numeroEncriptado = Integer.toString(numero1) + Integer.toString(numero2) + Integer.toString(numero3) + Integer.toString(numero4);
   }
 
-  public int obtenerNumeroEncriptado()
+  public String obtenerNumeroEncriptado()
   {
     return numeroEncriptado;
   }

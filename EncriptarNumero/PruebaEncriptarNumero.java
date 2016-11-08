@@ -13,6 +13,7 @@ public class PruebaEncriptarNumero{
     EncriptarNumero pass1 = new EncriptarNumero(pass);
 
     pass1.establecerNumeroEncriptado();
+    System.out.println(pass1.obtenerNumeroEncriptado());
 
   }
 }
