@@ -15,5 +15,13 @@ public class PruebaEncriptarNumero{
     pass1.establecerNumeroEncriptado();
     System.out.println(pass1.obtenerNumeroEncriptado());
 
+    System.out.println("Ingrese su numero encriptado: ");
+    pass = input.nextInt();
+
+    DesencriptarNumero pass2 = new DesencriptarNumero(pass);
+
+    pass2.establecerNumero();
+    System.out.println(pass2.obtenerNumero());
+
   }
 }
