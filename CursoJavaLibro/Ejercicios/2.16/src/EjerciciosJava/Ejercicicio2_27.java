@@ -16,20 +16,17 @@ public class Ejercicicio2_27 {
 
 	public static void main(String[] args) {
 
-		String línea1 = "* * * * * * * * ";
-		String línea2 = " * * * * * * * *";
-		
-		System.out.println(línea1);
-		System.out.println(línea2);
-		System.out.println(línea1);
-		System.out.println(línea2);
-		System.out.println(línea1);
-		System.out.println(línea2);
-		System.out.println(línea1);
-		System.out.println(línea2);
-
-
-
+            int contador = 1;
+            
+            
+            do 
+            {                
+               System.out.printf("%d ", contador); 
+               ++contador;
+            } 
+            while (contador <= 10);
+            
+            System.out.println();
 
 	}
 
