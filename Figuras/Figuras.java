@@ -30,7 +30,7 @@ public class Figuras extends JPanel
         break;
 
         case 2:
-          g.drawOval(10 + i * 10, 10 + i * 10, 50 + 1 * 10, 50 + i * 10);
+          g.drawOval(10 + i * 10, 10 + i * 10, 50 + i * 10, 50 + i * 10);
         break;
 
       }
