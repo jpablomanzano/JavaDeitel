@@ -21,12 +21,8 @@ public class Figuras extends JPanel
     int anchura = getWidth();
     int altura = getHeight();
 
-    int centroAnchura = anchura / 2;
+    int centroAnchura = achura / 2;
     int centroAltura = altura / 2;
-
-
-    int radio = 10;
-
 
     //Iteracion para dibujar cada fitura
     for (int i = 0; i < 10; i++)
@@ -36,16 +32,14 @@ public class Figuras extends JPanel
       switch (opcion)
       {
         case 1:
-          g.drawRect(centroAnchura - ( radio * i ), centroAltura - ( radio * i ), ( 20 * i ), ( 20 * i ) );
+          g.drawRect(10 + i * 10, 10 + i * 10, 50 + i * 10, 50 + i * 10);
         break;
 
         case 2:
-          g.drawOval(centroAnchura - ( radio * i ), centroAltura - ( radio * i ), ( 20 * i ), ( 20 * i ) );
-
+          g.drawOval(10 + i * 10, 10 + i * 10, 50 + i * 10, 50 + i * 10);
         break;
 
       }
-
 
     }
   }
