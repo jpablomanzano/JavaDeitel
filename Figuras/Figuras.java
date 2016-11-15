@@ -41,7 +41,6 @@ public class Figuras extends JPanel
 
         case 2:
           g.drawOval(centroAnchura - ( radio * i ), centroAltura - ( radio * i ), ( 20 * i ), ( 20 * i ) );
-
         break;
 
       }

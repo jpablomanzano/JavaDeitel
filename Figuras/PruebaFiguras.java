@@ -19,7 +19,7 @@ public class PruebaFiguras
 
     aplicacion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Asigno exit como salida
     aplicacion.add(panel);//Agrego mi dibujo al marco
-    aplicacion.setSize(300,300); //Medidas de mi marco
+    aplicacion.setSize(500,500); //Medidas de mi marco
     aplicacion.setVisible(true); //Hago que mi marco sea visible
 
   }
