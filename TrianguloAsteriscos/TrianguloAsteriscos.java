@@ -26,10 +26,10 @@ public class TrianguloAsteriscos
 
         System.out.println("b)"); //Inciso b
 
-        //Reinicio mis variables
+        //Inicializo mis variables para inciso b
         contadorLineas = 1;
         contadorAsteriscos = 1;
-        contadorAuxiliar = 1;
+        contadorAuxiliar = 10;
 
         //cuento las líneas
         while (contadorLineas <= 10)
@@ -40,12 +40,12 @@ public class TrianguloAsteriscos
                 System.out.print("*");
                 ++contadorAsteriscos;
             }
-            contadorAsteriscos = 1; //Reinicio en 1 contadorAsteriscos
-            contadorAuxiliar++; // Aumento en 1 auxiliar
-            ++contadorLineas; //Aumento en 1 mi contador de líneas
-            System.out.println(); //Imprimo un salto de línea para iniciar la siguiente línea
-        }
 
+            --contadorAuxiliar;
+            contadorAsteriscos = 1;
+            ++contadorLineas;
+            System.out.println();
+        }
 
     }
 }
