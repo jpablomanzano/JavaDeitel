@@ -23,6 +23,7 @@ public class TrianguloAsteriscos
             ++contadorLineas; //Aumento en 1 mi contador de líneas
             System.out.println(); //Imprimo un salto de línea para iniciar la siguiente línea
         }
+        System.out.println();
 
         System.out.println("b)"); //Inciso b
 
@@ -45,6 +46,50 @@ public class TrianguloAsteriscos
             contadorAsteriscos = 1;
             ++contadorLineas;
             System.out.println();
+        }
+        System.out.println();
+    
+        
+        System.out.println("c)");
+
+        contadorLineas = 1;
+
+        int contadorAuxiliar1 = 0;
+        int contadorEspacios = 0;
+
+        contadorAsteriscos = 0;
+        contadorAuxiliar = 10;
+
+        while (contadorLineas <= 10)
+        {
+            //Aumentando
+            if (contadorEspacios != 0)
+            {
+                while (contadorEspacios <= contadorAuxiliar1 && contadorAuxiliar != 0)
+                {
+                    System.out.print(" ");
+                    ++contadorEspacios;
+                }
+            }
+
+
+
+            while (contadorAsteriscos <= contadorAuxiliar)
+            {
+                System.out.print("*");
+                ++contadorAsteriscos;
+            }
+
+            contadorEspacios = 1;
+            contadorAsteriscos = 1;
+
+            ++contadorAuxiliar1;
+            --contadorAuxiliar;
+
+            ++contadorLineas;
+            System.out.println();
+
+
         }
 
     }
