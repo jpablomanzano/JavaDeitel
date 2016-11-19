@@ -48,47 +48,53 @@ public class TrianguloAsteriscos
             System.out.println();
         }
         System.out.println();
-    
-        
+
+
         System.out.println("c)");
 
-        contadorLineas = 1;
 
-        int contadorAuxiliar1 = 0;
         int contadorEspacios = 0;
+        contadorAsteriscos = 9;
 
-        contadorAsteriscos = 0;
-        contadorAuxiliar = 10;
-
-        while (contadorLineas <= 10)
+        for (int i = 1; i<= 10; ++i)
         {
-            //Aumentando
-            if (contadorEspacios != 0)
-            {
-                while (contadorEspacios <= contadorAuxiliar1 && contadorAuxiliar != 0)
-                {
-                    System.out.print(" ");
-                    ++contadorEspacios;
-                }
-            }
+
+          for (int j = 1; j <= contadorEspacios; j++)
+          {
+              System.out.print(" ");
+          }
+          for (int k = 1; k <= contadorAsteriscos; k++) {
+            System.out.print("*");
+          }
+          ++contadorEspacios;
+          --contadorAsteriscos;
+
+          System.out.println();
+        }
 
 
+        System.out.println("d)");
 
-            while (contadorAsteriscos <= contadorAuxiliar)
-            {
-                System.out.print("*");
-                ++contadorAsteriscos;
-            }
+        contadorEspacios = 9;
+        contadorAsteriscos = 1;
 
-            contadorEspacios = 1;
-            contadorAsteriscos = 1;
+        for (int i = 1; i <= 10; ++i)
+        {
 
-            ++contadorAuxiliar1;
-            --contadorAuxiliar;
+          for (int j = 1; j <= contadorEspacios; j++)
+          {
+            System.out.print(" ");
+          }
 
-            ++contadorLineas;
-            System.out.println();
+          for (int k = 1; k <= contadorAsteriscos; k++)
+          {
+            System.out.print("*");
+          }
 
+          --contadorEspacios;
+          ++contadorAsteriscos;
+
+          System.out.println();
 
         }
 
