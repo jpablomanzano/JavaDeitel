@@ -80,7 +80,8 @@ public class ComisionesVendedor{
       articuloSeleccionado = entrada.nextInt();
 
 
-      if (articuloSeleccionado >= 0) {
+      if (articuloSeleccionado >= 0)
+      {
         System.out.print("Ingrese la cantidad de articulos vendidos: ");
         int cantidadArticulosVendidos = entrada.nextInt();
 
