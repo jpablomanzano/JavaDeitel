@@ -2,10 +2,10 @@ public class TriplePitagoras
 {
   public static void main(String[] args)
   {
-      int contador = 0;
+      int contador = 1;
       int suma = 0;
 
-      System.out.printf("%10s\t%10s\t%10s\t\n","Lado 1", "Lado 2", "Hipotenusa");
+      System.out.printf("%17s\t%10s\t%10s\t\n","Lado 1", "Lado 2", "Hipotenusa");
 
       for (int lado1 = 1; lado1 <= 500; ++lado1)
       {
@@ -20,11 +20,12 @@ public class TriplePitagoras
 
             if ((hipotenusa * hipotenusa) == suma)
             {
-              System.out.printf("%d.- %10d\t%10d\t%10d\t\n",contador, lado1, lado2, hipotenusa);
+              System.out.printf("%4d.- %10d\t%10d\t%10d\t\n",contador, lado1, lado2, hipotenusa);
               ++contador;
             }
           }
         }
+
       }
 
   }
