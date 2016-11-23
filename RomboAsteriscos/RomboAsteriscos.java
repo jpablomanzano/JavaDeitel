@@ -21,10 +21,7 @@ public class RomboAsteriscos
       {
         System.out.print("*");
       }
-      for (contadorEspacios = 1; contadorEspacios <= auxiliarEspacios; ++contadorEspacios)
-      {
-        System.out.print(" ");
-      }
+      
 
       System.out.println();
       --auxiliarEspacios;
@@ -46,10 +43,7 @@ public class RomboAsteriscos
       {
         System.out.print("*");
       }
-      for (contadorEspacios = 1; contadorEspacios <= auxiliarEspacios; ++contadorEspacios)
-      {
-        System.out.print(" ");
-      }
+
       ++auxiliarEspacios;
       auxiliarAsteriscos -= 2;
       System.out.println();
