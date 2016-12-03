@@ -7,7 +7,7 @@ public class PruebaDibujarCaraSonriente
     DibujarCaraSonriente panel = new DibujarCaraSonriente();
 
     JFrame marco = new JFrame();
-
+    
     marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     marco.add(panel);
     marco.setSize(230, 250);

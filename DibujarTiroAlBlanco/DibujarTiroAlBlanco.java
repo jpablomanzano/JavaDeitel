@@ -1,49 +1,47 @@
+import java.util.Random;
 import java.awt.Graphics;
 import java.awt.Color;
 import javax.swing.JPanel;
 
 public class DibujarTiroAlBlanco extends JPanel
 {
-  public void paintComponent(Graphics g)
+  public Random numerosAleatorios = new Random();
+	public Color color1 = new Color(numerosAleatorios.nextInt(255), numerosAleatorios.nextInt(255), numerosAleatorios.nextInt(255));
+	public Color color2 = new Color(numerosAleatorios.nextInt(255), numerosAleatorios.nextInt(255), numerosAleatorios.nextInt(255));
+
+	public void paintComponent(Graphics g)
   {
-    super.paintComponent(g);
+	    //lLama a paintComponent para asegurar que el panel se muestra correctamente
+		super.paintComponent(g);
 
-    int anchura = getWidth();
-    int altura = getHeight();
+	    int anchura = getWidth();
+	    int altura = getHeight();
 
-    int centroAnchura = anchura / 2;
-    int centroAltura = altura / 2;
+	    int x1 = anchura / 12;
+	    int y1 = altura / 12;
 
-    int x1 = centroAnchura / 5;
-    int y1 = centroAltura / 5;
+	    int largo = x1 * 10;
+	    int alto = y1 * 10;
 
-    int largo = 100;
-    int alto = 100;
+	    for (int i = 1; i<= 5; ++i)
+	    {
+	      if ( i % 2 == 0 )
+	      {
+	        g.setColor(color1);
+	      }
+	      else
+	      {
+	        g.setColor(color2);
+	      }
 
-    int radio = 10;
+	      g.fillOval(x1, y1, largo, alto);
 
-    for (int i = 1; i<= 5; ++i)
-    {
-      if ( i % 2 == 0 )
-      {
-        g.setColor(Color.YELLOW);
-      }
-      else
-      {
-        g.setColor(Color.BLACK);
-      }
+	      x1 += anchura / 12;
+	      y1 += altura / 12;
 
-      g.fillOval(centroAnchura - x1, centroAnchura - y1, largo, alto);
-
-      x1 = x1 + 10;
-      y1 = y1 + 10;
-
-      largo = largo - 10;
-      alto = alto - 10;
-
-    }
-
-
+	      largo -= (anchura / 12) * 2;
+	      alto -= (altura / 12) * 2;
+	    }
 
   }
 }

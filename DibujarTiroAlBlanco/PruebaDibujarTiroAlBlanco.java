@@ -9,7 +9,7 @@ public class PruebaDibujarTiroAlBlanco
 
     marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     marco.add(dibujo);
-    marco.setSize(250, 250);
+    marco.setSize(600, 600);
     marco.setVisible(true);
 
   }
