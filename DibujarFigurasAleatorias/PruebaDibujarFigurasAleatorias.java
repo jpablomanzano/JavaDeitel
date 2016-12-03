@@ -10,7 +10,7 @@ public class PruebaDibujarFigurasAleatorias
     marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     marco.add(dibujo);
     marco.setVisible(true);
-    marco.setSize(250,250);
+    marco.setSize(500,500);
 
   }
 }
