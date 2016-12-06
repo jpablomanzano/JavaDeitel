@@ -37,7 +37,7 @@ public class CargoPorEstacionamiento
 
     public double calcularCargoEstacionamiento(double horas) 
     {
-        horasEstacionadas = (float) Math.floor(horas);
+        horasEstacionadas = (float) Math.ceil(horas);
         
         if (horasEstacionadas <= 3) 
         {
