@@ -11,6 +11,7 @@ public class AdivineElNumero
 
       int numeroAdivinar;
       int intentoUsuario;
+      int numeroIntentos;
 
       numeroAdivinar = numeroAleatorio.nextInt(1001);
 
@@ -18,6 +19,7 @@ public class AdivineElNumero
 
       System.out.print("Ingrese su intento: ");
       intentoUsuario = input.nextInt();
+      numeroIntentos = 1;
 
       while (intentoUsuario != numeroAdivinar)
       {
@@ -31,9 +33,12 @@ public class AdivineElNumero
           System.out.print("Demasiado alto. Intente nuevamente: ");
           intentoUsuario = input.nextInt();
         }
+
+        numeroIntentos++;
       }
 
       System.out.println("¡Felicidades, adivinó el número!");
       System.out.println("El número a adivinar era "+ numeroAdivinar);
+      System.out.println(numeroIntentos);
     }
 }
