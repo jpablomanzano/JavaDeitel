@@ -38,7 +38,21 @@ public class AdivineElNumero
       }
 
       System.out.println("¡Felicidades, adivinó el número!");
-      System.out.println("El número a adivinar era "+ numeroAdivinar);
-      System.out.println(numeroIntentos);
+      System.out.println("El número a adivinar era " + numeroAdivinar);
+      System.out.println(numeroIntentos + " intentos.");
+
+      if (numeroIntentos <= 10)
+      {
+        System.out.println("O ya sabía el secreto o tuvo suerte! ");
+      }
+      if (numeroIntentos == 10)
+      {
+        System.out.println("Aja! Ya sabía el secreto ");
+
+      }
+      else{
+        System.out.println("Debería hacerlo mejor!");
+
+      }
     }
 }
