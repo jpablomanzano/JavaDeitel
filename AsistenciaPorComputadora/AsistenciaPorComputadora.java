@@ -21,6 +21,7 @@ public class AsistenciaPorComputadora
         int contadorPreguntas = 1;
         int contadorCorrectas = 0;
         int contadorIncorrectas = 0;
+        int continuar = true;
 
         System.out.print("Bienvenido al asistente de la multiplicacion, presione 1 para continuar y 2 para salir: ");
         respuesta = input.nextInt();
@@ -45,6 +46,16 @@ public class AsistenciaPorComputadora
 
               contadorPreguntas++;
           }
+
+          if (contadorCorrectas > 7.5)
+          {
+            System.out.println("Esta listo para el siguiente nivel.");
+          }
+          else
+          {
+            System.out.println("Por favor pida ayuda adicional a su profesor.");
+          }
+
           System.out.println(contadorCorrectas);
           System.out.println(contadorIncorrectas);
 
@@ -104,16 +115,16 @@ public class AsistenciaPorComputadora
         switch(respuesta)
         {
             case 0:
-                System.out.print("No, Por favor intenta de nuevo: ");
+                System.out.println("No, Por favor intenta de nuevo: ");
                 break;
             case 1:
-                System.out.print("Incorrecto. Intenta una vez más: ");
+                System.out.println("Incorrecto. Intenta una vez más: ");
                 break;
             case 2:
-                System.out.print("No te rindas! Intenta de nuevo: ");
+                System.out.println("No te rindas! Intenta de nuevo: ");
                 break;
             case 3:
-                System.out.print("No. Sigue intentando: ");
+                System.out.println("No. Sigue intentando: ");
                 break;
         }
     }
