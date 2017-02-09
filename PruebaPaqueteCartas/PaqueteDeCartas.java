@@ -29,7 +29,7 @@ public class PaqueteDeCartas
     }
   }//fin del constructor PaqueteDeCartas
 
-  public barajar()
+  public void barajar()
   {
     //Después de barajar, la repartición debe empezar en paquete[0] otra vez
     cartaActual = 0; //reinicia cartaActual
