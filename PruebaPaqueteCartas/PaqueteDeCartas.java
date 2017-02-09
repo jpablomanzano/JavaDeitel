@@ -2,11 +2,11 @@ import java.util.Random;
 
 public class PaqueteDeCartas
 {
-  private Carta[] paquete;
-  private int cartaActual;
-  private static final int NUMERO_CARTAS = 52;
+  private Carta[] paquete;// arreglo de objetos Carta
+  private int cartaActual; //Subindice de la siguiente Carta a repartir
+  private static final int NUMERO_CARTAS = 52; //Número constante de cartas
 
-  private static final Random numerosAleatorios = new Random();
+  private static final Random numerosAleatorios = new Random(); //Objeto random
 
   //constructor de mi clase
   public PaqueteDeCartas()
@@ -31,26 +31,30 @@ public class PaqueteDeCartas
 
   public barajar()
   {
-    cartaActual = 0;
+    //Después de barajar, la repartición debe empezar en paquete[0] otra vez
+    cartaActual = 0; //reinicia cartaActual
 
-    for (int primera = 0; i < primera.length; i++)
+    for (int primera = 0; primera < paquete.length; primera++)
     {
+      int segunda = numerosAleatorios.nextInt(NUMERO_CARTAS);
+
       Carta temp = paquete[primera];
 
       paquete[primera] = paquete[segunda];
       paquete[segunda] = temp;
     }
   }
-
+  //reparte una Carta
   public Carta repartirCarta()
   {
+    //determina si quedan cartas por repartir
     if (cartaActual < paquete.length)
     {
-      return paquete[cartaActual++];
+      return paquete[cartaActual++]; //devuelve la cartaActual en el Arreglo
     }
     else
     {
-      return null;
+      return null; //devuelve null para indicar que se repartieron todas las cartas
     }
   }
 
