@@ -50,7 +50,19 @@ public class ManipulacionesArreglos
 			System.out.println("No se encontro el 5 en arregloInt");
 		}
 
-	}
+		ubicacion = Arrays.binarySearch(arregloInt, 832);
+
+		if (ubicacion >= 0)
+		{
+			System.out.printf("Se encontro el número 832 en la posición %d de arregloInt\n", ubicacion);
+		}
+
+		else
+		{
+			System.out.println("No se encontró el número 832 en arregloInt");
+		}
+
+	}//fin de main
 
 	public static void mostrarArreglo(int[] arreglo, String descripcion)
 	{
